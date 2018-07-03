@@ -1,54 +1,45 @@
-//user_manager.js
-//获取应用实例
-const app = getApp()
-
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
+
+    data: {
+        // 定义标题的数组
+        titles: ["Yellow", "Orange", "Green", "Blue", "Purple"],
+        // 定义选中标题的初始值0
+        selectedTitle: "0",
+    },
+    onLaunch: function () {
+
+    },
+    onshow: function (e) {
+        console.log("页面已启动")
+    },
+    // 定义点击标题的事件处理函数，将选中标题的id赋值给selectedTitle
+    bindtap: function (e) {
+        console.log(e)
         this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+            selectedTitle: e.currentTarget.id
+        });
+    },
+    //定义滑块改变的事件处理函数，将current赋值给selectedTitle
+    bindChange: function (e) {
+        this.setData({
+            selectedTitle: e.detail.current
         })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
+    },
+    onClick: function () {
+        console.log("click");
+        wx.navigateTo({
+            url: '../user/user'
+        })
+    },
+    onReady: function () {
+        // 页面渲染完成
+        var that = this;
+        wx.getSystemInfo({
+            success: function (res) {
+                that.setData({
+                    swiperHeight: (res.windowHeight - 37)
+                });
+            }
+        })
     }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
 })

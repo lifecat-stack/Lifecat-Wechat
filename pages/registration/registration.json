@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "人脸绑定",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "default",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": "50px"
+}

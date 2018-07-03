@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
 	"appid": "wx28ac4b462ade579d",
-	"projectname": "lifecat",
+	"projectname": "lifecat-test",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

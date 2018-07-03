@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "我的管理列表",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "default",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": "50px"
+}

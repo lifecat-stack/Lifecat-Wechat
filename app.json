@@ -1,12 +1,50 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/entrance/entrance",
+    "pages/registration/registration",
+    "pages/registration_message/registration_message",
+    "pages/user/user",
+    "pages/user_about/user_about",
+    "pages/user_bind/user_bind",
+    "pages/user_manager/user_manager"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00f",
+    "navigationBarTitleText": "LifeCat",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": "50px"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/registration/registration",
+        "text": "登记",
+        "iconPath": "images/bar_registration.png"
+      },
+      {
+        "pagePath": "pages/entrance/entrance",
+        "text": "门禁",
+        "iconPath": "images/bar_entrance.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "iconPath": "images/bar_user.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
   }
 }

@@ -1,22 +1,41 @@
-/**user_bind.wxss**/
-.userinfo {
+.titles {
+    height: 36px;
+    width: 750rpx;
+    background-color: lightgray;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+}
+.title {
+    width: 180rpx;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
-
-/*noinspection ALL*/
-.userinfo-avatar {
-    width: 128 rpx;
-    height: 128 rpx;
-    margin: 20 rpx;
-    border-radius: 50%;
+.title-selected {
+    border-bottom: 2px solid red;
+    color: red;
 }
-
-.userinfo-nickname {
-    color: #aaa;
+.page {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90rpx;
+    color: white;
 }
-
-.usermotto {
-    margin-top: 200px;
+.bc_Yellow {
+    background-color: yellow;
+}
+.bc_Orange {
+    background-color: orange;
+}
+.bc_Green {
+    background-color: green;
+}
+.bc_Blue {
+    background-color: blue;
+}
+.bc_Purple {
+    background-color: purple;
 }
