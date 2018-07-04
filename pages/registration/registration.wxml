@@ -24,7 +24,7 @@
             </li>
         </ul>
         <ul>
-            <block wx:for="{{user_list}}" wx:for-item="user" wx:key="index">
+            <block  wx:for="{{user_list}}" wx:for-item="user" wx:key="index">
                 <li>
                     <text class="bottom-box-text" >
                         {{user.community}}

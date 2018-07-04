@@ -25,11 +25,11 @@
     color: white;
 }
 .bc_registration {
-    background-color: yellow;
+    background: linear-gradient(to bottom right, yellowgreen , yellow);
 }
 .bc_entrance {
-    background-color: orange;
+    background: linear-gradient(to bottom right, greenyellow , green);
 }
 .bc_user {
-    background-color: green;
+    background: linear-gradient(to bottom right, yellow , red);
 }

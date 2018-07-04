@@ -26,6 +26,8 @@
 
     border-radius: 12px;
     box-shadow: 4px 4px 6px skyblue;
+
+    background: linear-gradient(to bottom right, skyblue , cornflowerblue);
 }
 
 .top-inner-box text{
@@ -50,8 +52,8 @@
 
 .bottom-box ul li{
     width: 100%;
-    padding-left: 20rpx;
-    padding-top: 10px;
+    padding-left: 40rpx;
+    padding-top: 10rpx;
 }
 
 .bottom-box-text{
