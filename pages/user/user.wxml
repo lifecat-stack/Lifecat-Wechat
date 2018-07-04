@@ -15,7 +15,8 @@
     <view class="btn">
         <ul>
             <block wx:for="{{mine_list}}" wx:for-item="mine" wx:key="index">
-                <li><span><image src="{{mine.pic_url}}"></image>{{mine.title}}</span></li>
+                <li bindtap="onClick" data-id="{{mine.id}}"><span><image
+                        src="{{mine.pic_url}}"></image>{{mine.title}}</span></li>
             </block>
         </ul>
     </view>

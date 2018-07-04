@@ -21,4 +21,5 @@
             </block>
         </ul>
     </view>
+    <icon type="search" size="50" class="post" bindtap="onPostClick"/>
 </view>

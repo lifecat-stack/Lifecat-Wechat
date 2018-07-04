@@ -29,4 +29,11 @@
 -----------------------
 #### WeChat目录分析
 
+-----------------------
+### SHOW
 
+![show-1](img/show-1.png)
+
+![show-2](img/show-2.png)
+
+![show-3](img/show-3.png)

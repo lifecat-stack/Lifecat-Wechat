@@ -1,9 +1,0 @@
-{
-  "backgroundTextStyle": "light",
-  "navigationBarBackgroundColor": "#fff",
-  "navigationBarTitleText": "信息登记",
-  "navigationBarTextStyle": "black",
-  "navigationStyle": "default",
-  "enablePullDownRefresh": true,
-  "onReachBottomDistance": "50px"
-}

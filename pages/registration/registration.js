@@ -63,5 +63,10 @@ Page({
             userInfo: e.detail.userInfo,
             hasUserInfo: true
         })
+    },
+    onPostClick:function () {
+        wx.navigateTo({
+            url: '../registration_message/registration_message'
+        });
     }
 })

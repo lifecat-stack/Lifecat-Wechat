@@ -4,14 +4,17 @@ Page({
         userInfo: {},
         mine_list:[
             {
+                "id":1,
                 "pic_url": "/images/icons/iocn_home_01.png",
                 "title":"关于",
             },
             {
+                "id":2,
                 "pic_url": "/images/icons/iocn_home_02.png",
                 "title":"我的管理列表",
             },
             {
+                "id":3,
                 "pic_url": "/images/icons/iocn_home_03.png",
                 "title":"管理员绑定",
             }
@@ -89,5 +92,29 @@ Page({
     },
     onUnload:function(){
         // 页面关闭
+    },
+    onClick:function (e) {
+        var id = e.currentTarget.dataset.id;
+        console.log("page id:"+id);
+        if (id === 1){
+            wx.navigateTo({
+                url: '../user_about/user_about'
+            });
+        }
+        else if(id === 2){
+            wx.navigateTo({
+                url: '../user_manager/user_manager'
+            });
+        }
+        else if(id === 3){
+            wx.navigateTo({
+                url: '../user_bind/user_bind'
+            });
+        }
+        else{
+            wx.navigateTo({
+                url: '../index/index'
+            });
+        }
     }
 })

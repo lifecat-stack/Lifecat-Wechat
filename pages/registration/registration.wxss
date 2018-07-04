@@ -45,69 +45,13 @@
     padding-top: 10px;
 }
 
-.user-text text {
-    display: flex;
-    justify-content: center;
-    width: 300rpx;
-}
-
-.user image {
-    height: 260rpx;
-    width: 260rpx;
-    border-radius: 130rpx;
-}
-
-.btn {
-    flex-direction: column;
-    width: 100%;
-    padding-top: 20px;
-}
-
-.btn image {
-    height: 40rpx;
-    width: 40rpx;
-}
-
-.btn ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.btn ul li {
-    width: 100%;
-    padding-top: 20px;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 14px;
-}
-
-.footer {
-    padding-top: 20px;
-    height: 100%;
-}
-
-button {
-    width: 600rpx;
-    margin: 0 auto;
-}
-
-label {
-    display: flex;
-    flex-direction: column
-}
-
-label view {
-    display: flex;
-    margin-top: 20rpx;
-}
-
-label view input {
-    flex: 1;
-    border-bottom: 1px solid #aaa;
+.post {
+    float: right;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    border: 0 solid #ffffff;
+    border-radius: 500px;
+    box-shadow: 4px 1px 1px #cccccc;
 }
