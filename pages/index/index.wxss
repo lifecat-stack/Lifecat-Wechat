@@ -1,7 +1,7 @@
 .titles {
     height: 36px;
     width: 750rpx;
-    background-color: lightgray;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: space-around;
 }

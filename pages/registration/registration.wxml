@@ -12,12 +12,30 @@
                 <text>已录入人员列表</text>
             </li>
             <li>
-                <text>社区    姓名    结果</text>
+                <text class="bottom-box-text" style="color: skyblue">
+                    社区
+                </text>
+                <text class="bottom-box-text" style="color: skyblue">
+                    姓名
+                </text>
+                <text class="bottom-box-text" style="color: skyblue">
+                    结果
+                </text>
             </li>
         </ul>
         <ul>
             <block wx:for="{{user_list}}" wx:for-item="user" wx:key="index">
-                <li><span>{{user.community}},{{user.name}},{{user.result}}</span></li>
+                <li>
+                    <text class="bottom-box-text" >
+                        {{user.community}}
+                    </text>
+                    <text class="bottom-box-text">
+                        {{user.name}}
+                    </text>
+                    <text class="bottom-box-text">
+                        {{user.result}}
+                    </text>
+                </li>
             </block>
         </ul>
     </view>

@@ -20,8 +20,16 @@
     align-items: center;
     flex-direction: column;
     background-color: cornflowerblue;
+
     height: 80%;
     width: 80%;
+
+    border-radius: 12px;
+    box-shadow: 4px 4px 6px skyblue;
+}
+
+.top-inner-box text{
+    color: #ffffff;
 }
 
 .bottom-box{
@@ -36,13 +44,19 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: left;
 }
 
 .bottom-box ul li{
+    width: 100%;
+    padding-left: 20rpx;
     padding-top: 10px;
+}
+
+.bottom-box-text{
+    width: 33%;
+    float: left;
 }
 
 .post {

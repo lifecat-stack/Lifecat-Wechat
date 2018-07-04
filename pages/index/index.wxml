@@ -3,7 +3,7 @@
     <!--给选中的组件，即数组当前项的下标与selectedTitle相等的组件，定义样式名titles-selected-->
     <block wx:for="{{titles}}">
         <view id="{{index}}" bindtap="bindtap" class="title {{index==selectedTitle ? 'title-selected' : ''}}">
-            {{item}}
+            {{item.name}}
         </view>
     </block>
 </view>
@@ -12,8 +12,8 @@
     <block wx:for="{{titles}}">
         <swiper-item>
             <!--设置5个样式名-->
-            <view class='page bc_{{item}}' bindtap="onClick" data-name="{{item}}">
-                {{item}}
+            <view class='page bc_{{item.title}}' bindtap="onClick" data-name="{{item.title}}">
+                {{item.name}}
             </view>
         </swiper-item>
     </block>

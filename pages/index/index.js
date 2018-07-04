@@ -2,15 +2,27 @@ Page({
 
     data: {
         // 定义标题的数组
-        titles: ["registration", "entrance", "user"],
+        titles: [
+            {
+                "title": "registration",
+                "name": "登记"
+            },
+            {
+                "title": "entrance",
+                "name": "门禁"
+            },
+            {
+                "title": "user",
+                "name": "我"
+            }],
         // 定义选中标题的初始值0
         selectedTitle: "0",
     },
     onLaunch: function () {
-
-    },
-    onshow: function (e) {
         console.log("页面已启动")
+    },
+    onshow: function () {
+        console.log("页面已显示")
     },
     // 定义点击标题的事件处理函数，将选中标题的id赋值给selectedTitle
     bindtap: function (e) {
