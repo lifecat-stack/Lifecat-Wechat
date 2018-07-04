@@ -1,8 +1,4 @@
 {
-  "backgroundTextStyle": "light",
-  "navigationBarBackgroundColor": "#00f",
   "navigationBarTitleText": "门禁二维码",
-  "navigationBarTextStyle": "white",
-  "navigationStyle": "default",
   "enablePullDownRefresh": false
 }

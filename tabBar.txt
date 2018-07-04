@@ -1,0 +1,27 @@
+"tabBar": {
+    "color": "#858585",
+    "selectedColor": "#008842",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/registration/registration",
+        "text": "登记",
+        "iconPath": "images/bar_registration.png",
+        "selectedIconPath": "images/bar_selected.png"
+      },
+      {
+        "pagePath": "pages/user_about/user_about",
+        "text": "我",
+        "iconPath": "images/bar_user.png",
+        "selectedIconPath": "images/bar_selected.png"
+      },
+      {
+        "pagePath": "pages/user_bind/user_bind",
+        "text": "我",
+        "iconPath": "images/bar_user.png",
+        "selectedIconPath": "images/bar_selected.png"
+      }
+    ]
+  },

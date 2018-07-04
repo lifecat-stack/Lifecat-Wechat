@@ -19,30 +19,6 @@
     "enablePullDownRefresh": true,
     "onReachBottomDistance": "50px"
   },
-  "tabBar": {
-    "color": "#a9b7b7",
-    "selectedColor": "#11cd6e",
-    "backgroundColor": "#fff",
-    "borderStyle": "white",
-    "position": "bottom",
-    "list": [
-      {
-        "pagePath": "pages/registration/registration",
-        "text": "登记",
-        "iconPath": "images/bar_registration.png"
-      },
-      {
-        "pagePath": "pages/entrance/entrance",
-        "text": "门禁",
-        "iconPath": "images/bar_entrance.png"
-      },
-      {
-        "pagePath": "pages/user/user",
-        "text": "我",
-        "iconPath": "images/bar_user.png"
-      }
-    ]
-  },
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000

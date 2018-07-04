@@ -2,7 +2,7 @@ Page({
 
     data: {
         // 定义标题的数组
-        titles: ["Yellow", "Orange", "Green", "Blue", "Purple"],
+        titles: ["registration", "entrance", "user"],
         // 定义选中标题的初始值0
         selectedTitle: "0",
     },
@@ -25,11 +25,28 @@ Page({
             selectedTitle: e.detail.current
         })
     },
-    onClick: function () {
+    onClick: function (e) {
         console.log("click");
-        wx.navigateTo({
-            url: '../user/user'
-        })
+        var x = e.currentTarget.dataset.name;
+        console.log(x);
+        if (x === 'registration') {
+            wx.navigateTo({
+                url: '../registration/registration'
+            });
+        }
+        else if (x === 'entrance') {
+            wx.navigateTo({
+                url: '../entrance/entrance'
+            });
+        }
+        else if (x === 'user') {
+            wx.navigateTo({
+                url: '../user/user'
+            });
+        }
+        else {
+            console.log("没有这个页面");
+        }
     },
     onReady: function () {
         // 页面渲染完成

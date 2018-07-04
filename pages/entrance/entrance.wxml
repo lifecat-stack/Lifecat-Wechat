@@ -1,13 +1,8 @@
 <!--user_manager.wxml-->
-<view class="container" xmlns:wx="http://www.w3.org/1999/xhtml">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="container-entrance">
+    <view class="imageframework">
+        <view class="imageframework-code">
+            <image src="../../images/2-code.png" style="height: 100px;width: 100px;"></image>
+        </view>
+    </view>
 </view>

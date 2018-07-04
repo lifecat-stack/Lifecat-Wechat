@@ -1,20 +1,20 @@
-    <view class="titles">
-        <!--绑定事件处理函数bindtap-->
-        <!--给选中的组件，即数组当前项的下标与selectedTitle相等的组件，定义样式名titles-selected-->
-        <block wx:for="{{titles}}">
-            <view id="{{index}}" bindtap="bindtap" class="title {{index==selectedTitle ? 'title-selected' : ''}}">
+<view class="titles">
+    <!--绑定事件处理函数bindtap-->
+    <!--给选中的组件，即数组当前项的下标与selectedTitle相等的组件，定义样式名titles-selected-->
+    <block wx:for="{{titles}}">
+        <view id="{{index}}" bindtap="bindtap" class="title {{index==selectedTitle ? 'title-selected' : ''}}">
+            {{item}}
+        </view>
+    </block>
+</view>
+<!--绑定事件处理函数bindchange-->
+<swiper bindchange="bindChange" current='{{selectedTitle}}' style="height:{{swiperHeight}}px">
+    <block wx:for="{{titles}}">
+        <swiper-item>
+            <!--设置5个样式名-->
+            <view class='page bc_{{item}}' bindtap="onClick" data-name="{{item}}">
                 {{item}}
             </view>
-        </block>
-    </view>
-    <!--绑定事件处理函数bindchange-->
-    <swiper bindchange="bindChange" current='{{selectedTitle}}' style="height:{{swiperHeight}}px">
-        <block wx:for="{{titles}}">
-            <swiper-item>
-                <!--设置5个样式名-->
-                <view class='page bc_{{item}}' bindtap="onClick">
-                    {{item}}
-                </view>
-            </swiper-item>
-        </block>
-    </swiper>
+        </swiper-item>
+    </block>
+</swiper>

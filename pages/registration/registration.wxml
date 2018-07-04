@@ -1,13 +1,24 @@
 <!--user_manager.wxml-->
-<view class="container" xmlns:wx="http://www.w3.org/1999/xhtml">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="registration-box">
+    <view class="top-box">
+        <view class="top-inner-box">
+            <text>绑定操作</text>
+            <text>可以继续录入人脸信息</text>
+        </view>
+    </view>
+    <view class="bottom-box">
+        <ul>
+            <li>
+                <text>已录入人员列表</text>
+            </li>
+            <li>
+                <text>社区    姓名    结果</text>
+            </li>
+        </ul>
+        <ul>
+            <block wx:for="{{user_list}}" wx:for-item="user" wx:key="index">
+                <li><span>{{user.community}},{{user.name}},{{user.result}}</span></li>
+            </block>
+        </ul>
+    </view>
 </view>

@@ -1,54 +1,93 @@
-//user_manager.js
-//获取应用实例
-const app = getApp()
-
+var app = getApp()
 Page({
-  data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+    data:{
+        userInfo: {},
+        mine_list:[
+            {
+                "pic_url": "/images/icons/iocn_home_01.png",
+                "title":"关于",
+            },
+            {
+                "pic_url": "/images/icons/iocn_home_02.png",
+                "title":"我的管理列表",
+            },
+            {
+                "pic_url": "/images/icons/iocn_home_03.png",
+                "title":"管理员绑定",
+            }
+        ],
+        item: {
+            signinHidden:false,
+            userlocal:{
+                nickName:'',
+                nickPwd:''
+            },
         }
-      })
+    },
+    onLoad:function(options){
+        // 页面初始化 options为页面跳转所带来的参数
+
+    },
+    modalconfirm:function(){
+        wx.setStorageSync('username', this.data.item.userlocal.nickName);
+        wx.setStorageSync('password', this.data.item.userlocal.nickPwd);
+        this.setData({
+            'item.signinHidden':true
+        })
+    },
+    modalcancel:function(){
+        var that = this;
+        wx.login({
+            success: function () {
+                wx.getUserInfo({
+                    success: function (res) {
+
+                        that.setData({
+                            userInfo:res.userInfo
+                        })
+                    }
+                })
+            }
+        })
+
+
+        this.onShow();
+        this.setData({
+            'item.signinHidden':true
+        })
+    },
+    quit:function(){
+        this.setData({
+            userInfo:'',
+            'item.signinHidden':false
+        })
+    },
+    saveusername:function(event){
+        this.setData({
+            'item.userlocal.nickName': event.detail.value
+        });
+    },
+    saveuserpwd:function(event){
+        this.setData({
+            'item.userlocal.nickPwd': event.detail.value
+        });
+    },
+    onReady:function(){
+
+        // 页面渲染完成
+    },
+    onShow:function(){
+        if(this.data.userInfo==''){
+            this.setData({
+                'item.signinHidden':false
+            })
+        }
+
+    },
+    onHide:function(){
+        // 页面隐藏
+    },
+    onUnload:function(){
+        // 页面关闭
     }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
 })

@@ -1,13 +1,28 @@
-<!--user_manager.wxml-->
-<view class="container" xmlns:wx="http://www.w3.org/1999/xhtml">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="mine-box">
+    <import src="/template/signin.wxml"/>
+    <template is="signin" data="{{...item}}"/>
+
+    <view class="user">
+        <view class="user-pic">
+            <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="user-name">{{userInfo.nickName}}</view>
+        <view class="user-text">
+            <text>欢迎使用LifeCat</text>
+        </view>
+    </view>
+
+    <view class="btn">
+        <ul>
+            <block wx:for="{{mine_list}}" wx:for-item="mine" wx:key="index">
+                <li><span><image src="{{mine.pic_url}}"></image>{{mine.title}}</span></li>
+            </block>
+        </ul>
+    </view>
+
+    <view class="footer">
+        <button type="warn" bindtap="quit"> 退出登录</button>
+    </view>
+
+
 </view>
