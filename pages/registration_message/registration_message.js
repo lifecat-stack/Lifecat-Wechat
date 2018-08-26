@@ -71,6 +71,7 @@ Page({
         var formData = e.detail.value;
         wx.request({
             url: 'http://www.lifecat.club:8080/lifecatweb/wechat.post?msg=2',
+            method: post,
             data: formData,
             header: {
                 'Content-Type': 'application/json'
